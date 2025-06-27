@@ -24,3 +24,49 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.xp140 {
+ @apply bg-lime-400;
+}
+.xp135 {
+ @apply bg-lime-300;
+}
+.xp130 {
+ @apply bg-lime-200;
+}
+.xp125 {
+ @apply bg-amber-200;
+}
+.xp120 {
+ @apply bg-yellow-200;
+}
+.xp115 {
+ @apply bg-yellow-100;
+}
+.xp110 {
+ @apply bg-yellow-50;
+}
+.xp105 {
+ @apply bg-gray-50;
+}
+.xp95 {
+ @apply bg-red-50;
+}
+.xp90 {
+ @apply bg-red-100;
+}
+.xp85 {
+ @apply bg-red-200;
+}
+.xp60 {
+ @apply bg-red-300;
+}
+.xp40 {
+ @apply bg-red-400;
+}
+.xp35 {
+ @apply bg-red-500;
+}
+.xp10 {
+ @apply bg-rose-950 text-white;
+}
