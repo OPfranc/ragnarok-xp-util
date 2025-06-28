@@ -1,4 +1,3 @@
-
 export enum Elements {
   Neutral = 'neutral',
   Earth = 'earth',

@@ -10,10 +10,10 @@ export default function Home() {
   const [serverExp, setServerExp] = useState(100)
 
   const normalMonster = monsters.filter(monster.isNormal)
-  .filter(monster => monster.href)
-  .filter(monster => monster.name.toLowerCase().includes(filter.toLowerCase()))
-  .sort((monsterA, monsterB) => (monsterA.level || 0) - (monsterB.level || 0))
-  const augmentedMonsterData = normalMonster.map(mmm => ({
+    .filter((monster) => monster.href)
+    .filter((monster) => monster.name.toLowerCase().includes(filter.toLowerCase()))
+    .sort((monsterA, monsterB) => (monsterA.level || 0) - (monsterB.level || 0))
+  const augmentedMonsterData = normalMonster.map((mmm) => ({
     ...mmm,
     receivedBaseExp: ((mmm.baseExp || 0) * getMultipliedExp({ monster: mmm, playerLevel: actualLevel })),
     receivedJobExp: ((mmm.jobExp || 0) * getMultipliedExp({ monster: mmm, playerLevel: actualLevel })),
@@ -30,19 +30,19 @@ export default function Home() {
             <label className='text-rose-600 font-bold'>Filtro</label>
             <input
               className='bg-gray-300 border text-black'
-              type="search" value={filter} onChange={event => setFilter(event.target.value)} />
+              type="search" value={filter} onChange={(event) => setFilter(event.target.value)} />
           </div>
           <div className='flex flex-col gap-[2px]'>
             <label className='text-rose-600 font-bold'>Server rate</label>
             <input
               className='bg-gray-300 border text-black'
-              type="number" min={0} max={99999999} value={serverExp} onChange={event => setServerExp(Number(event.target.value))} />
+              type="number" min={0} max={99999999} value={serverExp} onChange={(event) => setServerExp(Number(event.target.value))} />
           </div>
           <div className='flex flex-col gap-[2px]'>
             <label className='text-rose-600 font-bold'>Level</label>
             <input
               className='bg-gray-300 border text-black'
-              type="number" min={0} max={175} value={actualLevel} onChange={event => setActualLevel(Number(event.target.value))} />
+              type="number" min={0} max={175} value={actualLevel} onChange={(event) => setActualLevel(Number(event.target.value))} />
           </div>
         </header>
 
@@ -56,7 +56,7 @@ export default function Home() {
             <span className='w-[85px] px-[6px] pt-[6px] pb-[3px] text-center'>job exp</span>
           </div>
           <div className='w-full overflow-auto'>
-            {augmentedMonsterData.map(monster =>
+            {augmentedMonsterData.map((monster) =>
               <div className='w-fit flex flex-row bg-stone-50 text-black border ' key={monster.name + monster.id} >
                 <span
                   className={`w-[50px] border-r px-[6px] pt-[6px] pb-[3px] text-center 

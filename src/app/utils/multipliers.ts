@@ -1,5 +1,6 @@
 import { Monster } from '../data/monsters'
 
+
 type GetMultipliedExp = {
   playerLevel: number
   monster: Monster
